@@ -3,7 +3,7 @@ with
 source as (
     select
         *
-    from raw.stripe.payment
+    from {{ source('stripe', 'payment') }}
 ),
 
 --final CTE
